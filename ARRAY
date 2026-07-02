@@ -1,0 +1,20 @@
+#maximum value
+
+arr=[1,2,3,4,5]
+max_value=arr[0]
+
+for n in arr:
+    if n> max_value:
+        max_value=n
+print(max_value)
+
+#second largest
+
+arr=[1,2,3,4,5]
+largest=max(arr)
+second= -1
+
+for num in arr:
+    if num != largest and num>second:
+        second=num
+print(second)
