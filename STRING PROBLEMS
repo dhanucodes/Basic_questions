@@ -18,4 +18,33 @@ for ch in s:
     freq[ch] = freq.get(ch, 0)+1
 print(freq)
 
-#
+#first non repeating ch
+
+s="aabbbccccd"
+freq={}
+for ch in s:
+    freq[ch] = freq.get(ch, 0)+1
+for ch in s:
+    if freq[ch] == 1:
+        print(ch)
+        break
+#anagram
+
+s1="listen"
+s2="silent"
+
+if sorted(s1) == sorted(s2):
+    print("anagram")
+else:
+    print("not anagram")
+
+#remove duplicate
+
+s="programming"
+res=""
+for ch in s:
+    if ch not in res:
+        res += ch
+print(res)
+
+
