@@ -1,0 +1,21 @@
+c="madam"
+count=0
+for ch in c:
+    if ch in 'aeiou':
+        count += 1
+print(count)
+
+#print without space
+
+s="hel lo wor ld"
+print(s.replace(" ", ""))
+
+#counting frequency
+
+s="aabbbccccd"
+freq={}
+for ch in s:
+    freq[ch] = freq.get(ch, 0)+1
+print(freq)
+
+#
