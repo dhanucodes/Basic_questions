@@ -18,3 +18,58 @@ for num in arr:
     if num != largest and num>second:
         second=num
 print(second)
+
+
+#if arr is sorted
+
+n=int(input())
+arr=[]
+for i in range(n):
+    s=int(input())
+    arr.append(s)
+
+is_sorted=True
+
+for i in range(len(arr)-1):
+    if arr[i] > arr[i-1]:
+        is_sorted=False
+        break
+
+if is_sorted:
+    print("sorted")
+else:
+    print("not sorted")
+
+#remove dupliactes
+
+arr=list(map(int,input().split()))
+arr.sort()
+arr=set(arr)
+print(arr)
+
+#rotate arr by one
+
+arr=list(map(int,input().split()))
+rotated= arr[1:] + [arr[0]] 
+print(rotated)
+
+#right rotate
+
+arr=list(map(int,input().split()))
+rotated= [arr[-1]] + arr[:-1]
+print(rotated)
+
+# left rotate by k values
+
+arr=list(map(int,input().split()))
+k=int(input())
+k=k % len(arr)
+rotated= arr[k:] + arr[:k]
+print(rotated)
+
+#  move zeros to the end
+
+arr=list(map(int,input().split()))
+arr.sort(key=lambda x:x==0)
+print(arr)
+
