@@ -124,4 +124,29 @@ for i in range(1, len(s)):
 
 print("Max consecutive characters:", max_count)
 
+#armstrong number
 
+num=int(input())
+temp=num
+sum_val=0
+n=len(str(num))
+
+while temp>0:
+    digit=temp%10
+    sum_val+=digit**n
+    temp=temp//10
+
+if sum_val == num:
+    print("yes")
+else:
+    print("no")
+
+#find number once and others twice
+
+arr=list(map(int,input().split()))
+result=0
+for num in arr:
+    result ^=num
+print(result) 
+
+ 
