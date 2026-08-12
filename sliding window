@@ -1,0 +1,15 @@
+n = int(input())
+arr = list(map(int, input().split()))
+k = int(input())
+
+window = sum(arr[:k])
+maximum = window
+
+for i in range(k, n):
+
+    window += arr[i]
+    window -= arr[i-k]
+
+    maximum = max(maximum, window)
+
+print(maximum)
