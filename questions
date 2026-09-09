@@ -1,0 +1,62 @@
+1.The function def differenceofSum(n. m) accepts two integers n, m as arguments Find the sum of all numbers in range from 1 to m(both inclusive) that are not divisible by n. Return difference between sum of integers not divisible by n with sum of numbers divisible by n.
+
+solution:
+def differenceofSum(n,m):
+    not_divisible=0
+    divisible=0
+
+    for i in range(1,m+1):
+        if i%n == 0:
+            divisible += i
+        else:
+            not_divisible += i
+
+    return not_divisible - divisible
+
+print(differenceofSum(3,10))
+
+2.You are required to implement the following Function def LargeSmallSum(arr). 
+
+The function accepts an integers arr of size ’length’ as its arguments you are required to return the sum of second largest largest element from the even positions and second smallest from the odd position of given ‘arr’.
+
+solution:
+
+def largeSum(arr):
+    if len(arr) < 3:
+        return 0
+
+    even = []
+    odd = []
+
+    for i in range(len(arr)):
+        if i%2 == 0:
+            even.append(arr[i])
+        else:
+            odd.append(arr[i])
+
+    even.sort()
+    odd.sort()
+
+    return even[1] + odd[1]
+arr=list(map(int, input().split()))
+print(largeSum(arr))
+
+3.The function def ProductSmallestPair(sum, arr) accepts an integers sum and an integer array arr of size n. Implement the function to find the pair, (arr[j], arr[k]) where j!=k, Such that arr[j] and arr[k] are the least two elements of array (arr[j] + arr[k] <= sum) and return the product of element of this pair
+
+solution:
+
+def product(sum,arr):
+    if len(arr) < 2:
+        return -1
+
+    arr.sort()
+
+    if arr[0] + arr[1] <= sum:
+        return arr[0] * arr[1]
+    else:
+        return 0
+
+sum=int(input())
+arr=list(map(int,input().split()))
+
+print(product(sum,arr))
