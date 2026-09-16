@@ -1,3 +1,5 @@
+Kadane's Algorithm is used to find the maximum sum of a continuous subarray.
+
 def maxarray(arr):
     current_sum = arr[0]
     max_sum=arr[0]
