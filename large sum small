@@ -1,0 +1,20 @@
+arr = [3, 2, 1, 7, 5, 4]
+
+even = []
+odd = []
+
+for i in range(len(arr)):
+    if i % 2 == 0:
+        even.append(arr[i])
+    else:
+        odd.append(arr[i])
+
+even.sort()
+odd.sort()
+
+second_largest_even = even[-2]
+second_smallest_odd = odd[1]
+
+answer = second_largest_even + second_smallest_odd
+
+print(answer)
