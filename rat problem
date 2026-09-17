@@ -1,0 +1,23 @@
+There are r rats.
+
+Each rat needs unit amount of food.
+
+You have houses containing food.
+
+Find the minimum number of houses needed to provide enough food.
+
+solution:
+
+r=int(input())
+unit=int(input())
+
+home=list(map(int,input().split()))
+total=0
+target= r * unit
+
+for i in range(len(home)):
+    total= total + home[i]
+
+    if total >= target:
+        print(i+1)
+        break
