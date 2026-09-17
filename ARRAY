@@ -47,6 +47,17 @@ arr.sort()
 arr=set(arr)
 print(arr)
 
+# another method
+
+arr = [10, 20, 10, 30, 20]
+
+unique = []
+
+for x in arr:
+    if x not in unique:
+        unique.append(x)
+
+print(unique)
 #rotate arr by one
 
 arr=list(map(int,input().split()))
