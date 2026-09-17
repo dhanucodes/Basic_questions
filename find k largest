@@ -1,0 +1,8 @@
+arr = [10, 5, 20, 8, 15]
+k = 2
+
+for i in range(k):
+    largest = max(arr)
+    arr.remove(largest)
+
+print(largest)
