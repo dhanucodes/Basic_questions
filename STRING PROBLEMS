@@ -47,4 +47,77 @@ for ch in s:
         res += ch
 print(res)
 
+#REVERSE LOOP
 
+s = input()
+
+reverse = ""
+
+for i in range(len(s) - 1, -1, -1):
+    reverse = reverse + s[i]
+
+print(reverse)
+
+#PALIDROME
+
+s = input()
+
+reverse = ""
+
+for i in range(len(s) - 1, -1, -1):
+    reverse = reverse + s[i]
+
+if s == reverse:
+    print("Palindrome")
+else:
+    print("Not Palindrome")
+
+#ANAGRAM WITHOUT SORTING
+
+s1 = input()
+s2 = input()
+
+if len(s1) != len(s2):
+    print("Not Anagram")
+else:
+    freq1 = {}
+    freq2 = {}
+
+    for ch in s1:
+        if ch in freq1:
+            freq1[ch] += 1
+        else:
+            freq1[ch] = 1
+
+    for ch in s2:
+        if ch in freq2:
+            freq2[ch] += 1
+        else:
+            freq2[ch] = 1
+
+    if freq1 == freq2:
+        print("Anagram")
+    else:
+        print("Not Anagram")
+
+#REVERSE WORDS
+
+s = input()
+
+words = s.split()
+
+words.reverse()
+
+print(" ".join(words))
+
+#REPLACE
+
+s = input()
+old = input()
+new = input()
+
+result = s.replace(old, new)
+
+print(result)
+
+#
