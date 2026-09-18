@@ -1,0 +1,33 @@
+PROXIMITY PROBLEM(CODE CHEF)
+
+arr=list(map(int, input().split()))
+n=int(input())
+d=int(input())
+count=0
+
+for i in range(len(arr)):
+    if abs(arr[i] - n) <= d:
+        count+=1
+
+if count == 0 :
+    print(-1)
+else:
+    print(count)
+
+MAGIC BINARY NUMBERS(CODE CHEF)
+
+n=int(input())
+binary=bin(n) [2:]
+
+total=0
+
+for ch in binary:
+    if ch == '0':
+        total += 1
+    else:
+        total += 2
+
+if total % 2 == 1:
+    print("magical")
+else:
+    print("non magical")
