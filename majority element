@@ -1,0 +1,14 @@
+arr=list(map(int,input().split()))
+freq={}
+
+n=len(arr)//2
+
+for x in arr:
+    if x in freq:
+        freq[x]=freq[x]+1
+    else:
+        freq[x]=1
+
+for x in freq:
+    if freq[x] > n:
+        print(x)
