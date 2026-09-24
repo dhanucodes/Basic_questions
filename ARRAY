@@ -84,6 +84,18 @@ arr=list(map(int,input().split()))
 arr.sort(key=lambda x:x==0)
 print(arr)
 
+another method:
+
+arr = [0, 1, 0, 3, 12]
+
+count = arr.count(0)
+
+for i in range(count):
+    arr.remove(0)
+    arr.append(0)
+
+print(arr)
+
 # union of two array
 
 arr1=list(map(int,input().split()))
