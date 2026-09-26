@@ -97,3 +97,19 @@ def passwordChecker(s,n):
 s=input()
 n=len(s)
 print(passwordChecker(s,n))
+
+#valid palindrome
+
+s=input()
+result=''
+
+for ch in s:
+    if ch.isalnum():
+        result+=ch.lower()
+
+if result == result[::-1]:
+    print("True")
+else:
+    print("False")
+
+#
