@@ -1,0 +1,12 @@
+s = input()
+
+hyphens = ""
+others = ""
+
+for ch in s:
+    if ch == '-':
+        hyphens += ch
+    else:
+        others += ch
+
+print(hyphens + others)
