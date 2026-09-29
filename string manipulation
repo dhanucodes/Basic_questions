@@ -1,0 +1,11 @@
+s = input()
+
+result = ""
+
+for ch in s:
+    if ch == 'a':
+        result += 'x'
+    else:
+        result += ch
+
+print(result)
