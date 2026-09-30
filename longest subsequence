@@ -1,0 +1,17 @@
+s = input()
+
+result = ""
+current = ""
+
+for ch in s:
+    if ch not in current:
+        current += ch
+    else:
+        if len(current) > len(result):
+            result = current
+        current = ch
+
+if len(current) > len(result):
+    result = current
+
+print(result)
