@@ -112,4 +112,32 @@ if result == result[::-1]:
 else:
     print("False")
 
-#
+#CARRY FORWARD
+
+n1=input()
+n2=input()
+carry=0
+count=0
+
+for i in range(len(n1) -1, -1, -1):
+    total=int(n1[i]) + int(n2[i]) + int(carry)
+
+    if total > 9:
+        count+=1
+        carry+=1
+    else:
+        carry=0
+
+print(count)
+
+#SUM OF COMMON MULTIPLE
+
+n=int(input())
+m=int(input())
+arr=[]
+
+for i in range(n,m):
+    if i%3 == 0 and i%5 == 0:
+        arr.append(i)
+
+print(sum(arr))
